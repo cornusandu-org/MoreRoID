@@ -1,3 +1,6 @@
+/**
+ * @internal
+ */
 export type RoID = "roblox-navbar-left-menu-home" |
                     "roblox-navbar-left-menu-profile" |
                     "roblox-navbar-left-menu-rblxplus" |

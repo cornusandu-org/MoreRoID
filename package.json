@@ -6,7 +6,7 @@
     "tsbuild": "tsc",
     "tsbuild:watch": "vite build --watch",
     "bundle": "esbuild dist/index.js --bundle --platform=browser --format=esm --outfile=dist/index.js --allow-overwrite --external:node:fs/promises",
-    "obfuscate": "javascript-obfuscator dist --output dist --compact true --control-flow-flattening true",
+    "obfuscate": "javascript-obfuscator dist --output dist --config obfuscate.config.js",
     "build": "npm run tsbuild",
     "start": "npx serve ."
   },

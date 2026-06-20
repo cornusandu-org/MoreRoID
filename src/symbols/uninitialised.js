@@ -1,3 +1,5 @@
+import ValueEqualsDataUninitialisedSym from "../errors/SymbolEqualsError/uninitialised";
+
 /**
  * == DataUndefinedSym
  * @internal
@@ -14,5 +16,5 @@ export function __16ad663dc2334d059a78c4606b9f1773(name, value, message) {
     if (message === undefined)
         message = `Recieved uninitialised data: ${name} === ${String(__da62a41989a449a2ae3c2174ecbfc126)}`;
     if (value === __da62a41989a449a2ae3c2174ecbfc126)
-        throw new TypeError(message);
+        throw new ValueEqualsDataUninitialisedSym(message);
 }
