@@ -1,0 +1,29 @@
+{
+  "name": "moreroid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tsbuild": "tsc",
+    "tsbuild:watch": "vite build --watch",
+    "bundle": "esbuild dist/index.js --bundle --platform=browser --format=esm --outfile=dist/index.js --allow-overwrite --external:node:fs/promises",
+    "obfuscate": "javascript-obfuscator dist --output dist --compact true --control-flow-flattening true",
+    "build": "npm run tsbuild",
+    "start": "npx serve ."
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "esbuild": "^0.28.1",
+    "glob": "^13.0.6",
+    "javascript-obfuscator": "^5.4.3",
+    "terser": "^5.48.0",
+    "typescript": "^6.0.3",
+    "vite": "^6.4.3"
+  },
+  "type": "module",
+  "dependencies": {
+    "js-sha256": "^0.11.1",
+    "uuid": "^14.0.0"
+  }
+}
